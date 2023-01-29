@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../CSS/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d71c71aee6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">Voer hieronder je naam om je scoren te claimen</h2>
+                <input type="text" name="naam" id="username" placeholder="Voer je naam in">
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Opslaan</button>
+            </form>
+            <a href="/HTML/game.html" class="btn">Speel opnieuw<i class="fa-solid fa-gamepad"></i></a>
+            <a href="/HTML/index.html" class="btn">Terug naar home<i class="fa-solid fa-house"></i></a>
+        </div>
+    </div>
+    <script src="../JS/end.js"></script>
+</body>
+</html>

@@ -12,36 +12,36 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'Vraag 1',
-        choice1: '2',
-        choice2: '7',
-        choice3: '21',
-        choice4: '17',
+        question: 'Hoe heet ardjun 1',
+        choice1: 'Jan',
+        choice2: 'Ardjun',
+        choice3: 'Piet',
+        choice4: 'Jantje',
+        answer: 1,
+    },
+    {
+        question: 'Welke school zitten wij 2',
+        choice1: 'Albeda',
+        choice2: 'GLR',
+        choice3: 'De school',
+        choice4: 'Ok',
         answer: 2,
     },
     {
-        question: 'Vraag 2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
-    },
-    {
-        question: 'Vraag 3',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
+        question: 'Wat is de release datum van CS:GO 3',
+        choice1: '1 Juli 2011',
+        choice2: '21 augustus 2012',
+        choice3: '19 november 2016',
+        choice4: '12 december 2012',
+        answer: 3,
     },
     {
         question: 'Vraag 4',
-        choice1: '2',
-        choice2: '4',
+        choice1: 'Slecht',
+        choice2: 'Goed',
         choice3: '21',
         choice4: '17',
-        answer: 2,
+        answer: 4,
     },
     {
         question: 'Vraag 5',
@@ -49,7 +49,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: '17',
-        answer: 2,
+        answer: 1,
     },
     {
         question: 'Vraag 6',
@@ -65,7 +65,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: '17',
-        awsner: 2,
+        answer: 3,
     },
     {
         question: 'Vraag 8',
@@ -73,7 +73,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: '17',
-        awsner: 2,
+        answer: 4,
     },
     {
         question: 'Vraag 9',
@@ -81,7 +81,7 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: '17',
-        awsner: 2,
+        answer: 1,
     },
     {
         question: 'Vraag 10',
@@ -89,12 +89,12 @@ let questions = [
         choice2: '4',
         choice3: '21',
         choice4: '17',
-        awsner: 2,
+        answer: 2,
     }
 ]
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 10
 
 startGame = () => {
     questionCounter = 0
@@ -107,7 +107,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('/end.html')
+        return window.location.assign('./end.html')
     }
 
     questionCounter++
@@ -125,36 +125,33 @@ getNewQuestion = () => {
 
     availableQuestions.splice(questionsIndex, 1)
 
-    acceptingAnwsers = true
+    acceptingAnswers = true
 }
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if(!acceptingAnwsers) return
+        if(!acceptingAnswers) return;
 
-        acceptingAnwsers = false
-        const selectedChoice = e.target
-        const selectedAnwser = selectedChoice.dataset['number']
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
 
-        let classToApply = selectedAnwser == currentQuestion.anwser ? 'correct' : 'incorrect'
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
+         'incorrect'
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
-        if(!choice) {
-            console.log("Choice not found!");
-           } else {
-            choice.classList.add(classToApply);
-           }
+        
         setTimeout(() => {
-            selectedChoice.parrentElement.classList.remove(classToApply)
+            selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
         }, 1000)
-    });
-});
+    })
+})
 
 incrementScore = num => {
     score +=num
