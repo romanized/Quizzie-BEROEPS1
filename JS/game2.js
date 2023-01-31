@@ -12,7 +12,7 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'Fortnite 1',
+        question: 'Minecraft 1',
         choice1: 'Jan',
         choice2: 'Ardjun',
         choice3: 'Piet',
@@ -20,7 +20,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: 'Fortnite 2',
+        question: 'Minecraft 2',
         choice1: 'Albeda',
         choice2: 'GLR',
         choice3: 'De school',
@@ -28,7 +28,7 @@ let questions = [
         answer: 2,
     },
     {
-        question: 'Fortnite 3',
+        question: 'Minecraft 3',
         choice1: '1 Juli 2011',
         choice2: '21 augustus 2012',
         choice3: '19 november 2016',
@@ -36,7 +36,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: 'Fortnite 4',
+        question: 'Minecraft 4',
         choice1: 'Slecht',
         choice2: 'Goed',
         choice3: '21',
@@ -44,7 +44,7 @@ let questions = [
         answer: 4,
     },
     {
-        question: 'Fortnite 5',
+        question: 'Minecraft 5',
         choice1: '2',
         choice2: '4',
         choice3: '21',
@@ -52,7 +52,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: 'Fortnite 6',
+        question: 'Minecraft 6',
         choice1: '2',
         choice2: '4',
         choice3: '21',
@@ -60,7 +60,7 @@ let questions = [
         answer: 2,
     },
     {
-        question: 'Fortnite 7',
+        question: 'Minecraft 7',
         choice1: '2',
         choice2: '4',
         choice3: '21',
@@ -68,7 +68,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: 'Fortnite 8',
+        question: 'Minecraft 8',
         choice1: '2',
         choice2: '4',
         choice3: '21',
@@ -76,7 +76,7 @@ let questions = [
         answer: 4,
     },
     {
-        question: 'Fortnite 9',
+        question: 'Minecraft 9',
         choice1: '2',
         choice2: '4',
         choice3: '21',
@@ -84,7 +84,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: 'Fortnite 10',
+        question: 'Minecraft 10',
         choice1: '2',
         choice2: '4',
         choice3: '21',
@@ -107,7 +107,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.assign('./end.html')
+        return window.location.assign('./end2.html')
     }
 
     questionCounter++
