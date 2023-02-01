@@ -1,25 +1,7 @@
 body{
-    background-color: rgb(0, 0, 0);
-}
+    background-image: url(../img-csgo/tercsgo_huc01d3a403c050d47715d6aeed15b344f_839613_1920x1080_resize_q100_lanczos.jpeg);
+    background-size: cover;
+    scroll-behavior: smooth;
 
-#img-banner{
-    position: relative;
-    right: 8px;
-    width: 1250px;
-    height: 600px;
-}
-
-#img-banner1{
-    position: relative;
-    right: 15px;
-    width: 760px;
-    height: 600px;
-}
-
-#text{
-    color: white;
-    position: relative;
-    bottom: 175px;
-    left: 380px;
 }
 
