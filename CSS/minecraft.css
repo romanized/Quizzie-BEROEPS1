@@ -1,18 +1,4 @@
 body{
-    background-color: rgb(0, 0, 0);
+    background-image: url(../img-minecraft/jack-o-donoghue-loop.gif);
+    background-size: cover;
 }
-
-#img-banner{
-    position: relative;
-    left: 450px;
-    width: 1050px;
-    height: 500px;
-}
-
-#text{
-    color: white;
-    position: relative;
-    bottom: 150px;
-    left: 800px;
-}
-

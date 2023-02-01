@@ -6,7 +6,7 @@ body {
     margin-bottom: 0.8rem;
     width: 100%;
     border-radius: 4px;
-    background: rgb(18, 93, 255);
+    background: rgba(138, 145, 160, 0.452);
     font-size: 3rem;
     min-width: 80rem;
 }
