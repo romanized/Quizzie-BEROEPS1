@@ -38,10 +38,28 @@
   }
   h1 {
     font-weight: 500;
+      color: #fff;
+      text-align: center;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0 10px blue, 0 0 20px yellow, 0 0 30px blue, 0 0 40px yellow, 0 0 70px yellow;
+      animation: shine 3s ease-out infinite;
+    
+    @keyframes shine {
+      from {
+        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow, 0 0 70px yellow;
+      }
+      to {
+        text-shadow: 0 0 20px yellow, 0 0 40px yellow, 0 0 60px yellow, 0 0 80px yellow, 0 0 100px yellow;
+      }
+    }
   }
   h2 {
     font-weight: 400;
   }
+
   .sample-section-wrap {
     position: relative;
     background-color: black;
